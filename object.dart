@@ -1,9 +1,9 @@
 // dart object.dart
 
 void main() {
-  Deck deck = Deck();
+  Deck deck = Deck()
+  ..shuffle();
   print(deck);
-
 }
 
 class Deck {
@@ -39,7 +39,12 @@ class Deck {
   String toString() {
     return cards.toString();
   }
+
+  dynamic shuffle() {
+    cards.shuffle();
+  }
 }
+
 class Card {
   String suit = '';
   String rank = '';
